@@ -1,0 +1,17 @@
+footer {
+    background-color: #333333;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: #fff;
+}
+.footer-right{
+    text-align: right;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+    padding-right: 10px;
+}
+
+@media only screen and (max-width : 992px) {}
