@@ -16,17 +16,16 @@ import { environment } from 'src/environments/environment';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     SharedModule,
-    AppRoutingModule,
     BlogModule,
-    HomeModule
+    HomeModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,15 +4,12 @@ import { BlogComponent } from './blog/blog.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [BlogComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {
-        path: 'blog', 
-        component: BlogComponent
-      }
+      { path: 'blog', component: BlogComponent }
     ])
-  ]
+  ], 
+  declarations: [BlogComponent]
 })
 export class BlogModule { }
