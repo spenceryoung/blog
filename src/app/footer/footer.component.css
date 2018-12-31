@@ -1,5 +1,5 @@
 footer {
-    background-color: #333333;
+    background-color: #343a40;
     padding-top: 25px;
     padding-bottom: 25px;
     color: #fff;
@@ -11,7 +11,9 @@ footer {
 footer a {
     text-decoration: none;
     color: #fff;
-    padding-right: 10px;
 }
 
+footer a:not(:last-child) {
+    padding-right: 10px;
+}
 @media only screen and (max-width : 992px) {}

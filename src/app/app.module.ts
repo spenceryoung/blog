@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './shared/app-routing/app-routing.module';
 import { BlogModule } from './blog/blog.module';
@@ -21,10 +22,11 @@ import { environment } from 'src/environments/environment';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     SharedModule,
     AppRoutingModule,
     BlogModule,
-    HomeModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

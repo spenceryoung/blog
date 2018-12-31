@@ -1,13 +1,12 @@
-export interface Blog {
+export interface IBlogPost {
     blogId: string;
     title: string;
     body: string;
     category: string;
     tags: string[];
-    views: string;
-    dateCreated: string;
+    views: number;
+    datePosted: string;
     author: string;
-    authorId: string;
-    datePosted: string; 
+    datemodified: string; 
     modifiedByAuthor: string;
 }
