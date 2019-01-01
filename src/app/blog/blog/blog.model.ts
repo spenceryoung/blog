@@ -1,7 +1,6 @@
-export interface IBlogPost {
+export interface IBlogPostInfo {
     blogId: string;
     title: string;
-    body: string;
     category: string;
     tags: string[];
     views: number;

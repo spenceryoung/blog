@@ -9,7 +9,7 @@ import * as firebase from 'firebase/app';
 })
 export class AuthService {
 
-    constructor(public afAuth: AngularFireAuth, public router: Router) {}
+    constructor(private afAuth: AngularFireAuth, private router: Router) {}
     
     isAuthenticated(): boolean {
         if(firebase.auth().currentUser) {

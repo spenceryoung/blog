@@ -2,13 +2,13 @@ import { Injectable } from "@angular/core";
 import 'rxjs';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from "rxjs";
-import { IBlogPost } from "../blog/blog/blog.model";
+import { IBlogPostInfo } from "../blog/blog/blog.model";
 
 @Injectable({
     providedIn: 'root'
 })
 export class DBService {
-    private blogPostCOllectionRef: AngularFirestoreCollection<IBlogPost>;
+    private blogPostCOllectionRef: AngularFirestoreCollection<IBlogPostInfo>;
 	constructor(public db: AngularFirestore) {
         this.blogPostCOllectionRef = db.collection('blogposts');
     }
