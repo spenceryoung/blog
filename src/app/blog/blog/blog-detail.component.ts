@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./blog-detail.component.css']
 })
 export class BlogDetailComponent implements OnInit {
-  private post: IBlogPost;
+  post: IBlogPost;
   constructor(private dbService: DBService, private route: ActivatedRoute) { }
 
   ngOnInit() {

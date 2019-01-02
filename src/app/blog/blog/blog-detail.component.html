@@ -1,3 +1,9 @@
-<div>
-  Yep
+<div class="background-image-container">
+  <img [src]="post.backgroundimageurl" class="img-fluid">
+</div>
+<div class="row">
+  <div class="col">
+    <h5 class="card-title">{{post?.title}}</h5>
+    <p>{{post?.body}}</p>
+  </div>
 </div>

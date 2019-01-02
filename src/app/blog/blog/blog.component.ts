@@ -9,13 +9,13 @@ import { IBlogPost } from './blog.model';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  private posts: IBlogPost[];
+  posts: IBlogPost[] = [];
 	constructor(private dbService: DBService) { }
 
   ngOnInit(): void {
 		this.dbService.getBlogPosts().subscribe(
       posts => {
-        this.posts = posts;
+         this.posts = posts;
       }
     ); 
 	}
