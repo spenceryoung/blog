@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DBService } from 'src/app/core/db.service';
-import { IBlogPostInfo } from './blog.model';
+import { IBlogPost } from './blog.model';
 
 
 @Component({
@@ -9,15 +9,14 @@ import { IBlogPostInfo } from './blog.model';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  private posts: IBlogPostInfo[];
+  private posts: IBlogPost[];
 	constructor(private dbService: DBService) { }
 
   ngOnInit(): void {
-		this.dbService.getBlogPost().subscribe(
-			posts => {
+		this.dbService.getBlogPosts().subscribe(
+      posts => {
         this.posts = posts;
-			},
-			error => { }
-    );
+      }
+    ); 
 	}
 }
