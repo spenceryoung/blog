@@ -7,15 +7,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [LoginComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      {path: 'login', component: LoginComponent}
-    ]),
-    AngularFireAuthModule,
-    FormsModule,
-    ReactiveFormsModule
-  ]
+	declarations: [LoginComponent],
+	imports: [
+		CommonModule,
+		RouterModule.forChild([
+			{ path: 'login', component: LoginComponent }
+		]),
+		AngularFireAuthModule,
+		FormsModule,
+		ReactiveFormsModule
+	]
 })
 export class UserModule { }

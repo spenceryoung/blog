@@ -4,11 +4,11 @@ import { ErrorComponent } from './error/error.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [ErrorComponent],
-  imports: [
-    CommonModule,
-    RouterModule
-  ]
+	declarations: [ErrorComponent],
+	imports: [
+		CommonModule,
+		RouterModule
+	]
 })
 export class SharedModule { }
 

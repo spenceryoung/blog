@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
-  declarations: [AdminComponent],
-  imports: [
-    CommonModule
-  ]
+	declarations: [AdminComponent],
+	imports: [
+		CommonModule
+	]
 })
 export class AdminModule { }

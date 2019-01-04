@@ -13,21 +13,21 @@ import { FooterComponent } from './footer/footer.component';
 import { environment } from 'src/environments/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    SharedModule,
-    BlogModule,
-    HomeModule,
-    AppRoutingModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		FooterComponent
+	],
+	imports: [
+		BrowserModule,
+		AngularFireModule.initializeApp(environment.firebase),
+		AngularFirestoreModule,
+		SharedModule,
+		BlogModule,
+		HomeModule,
+		AppRoutingModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
