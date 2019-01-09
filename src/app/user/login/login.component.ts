@@ -11,8 +11,9 @@ export class LoginComponent {
 	pageTitle = 'Log In';
 
 	constructor(private authService: AuthService, private router: Router) { }
-
+	
 	login(loginForm: NgForm) {
+		console.log(loginForm);
 		this.authService.login(loginForm.form.value).then(res => {
 			this.router.navigate(['/home']);
 		}, err => {

@@ -1,0 +1,23 @@
+.post-body {
+    max-width: 800px;
+    margin: auto;
+}
+.post-body p {
+    line-height: 2;
+}
+
+.background-image-container {
+    margin-top: -71px;
+}
+
+.background-image-container div {
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.container-fluid {
+    padding-top: 0px;
+}

@@ -1,9 +1,11 @@
 <div class="background-image-container">
-	<img [src]="post.backgroundimageurl" class="img-fluid">
+	<div [ngStyle]="{ 'background-image': 'url(' + post.backgroundimageurl + ')'}"></div>
 </div>
 <div class="row">
 	<div class="col">
-		<h5 class="card-title">{{post?.title}}</h5>
-		<p>{{post?.body}}</p>
+		<div class="post-body">
+			<h5 class="card-title">{{post?.title}}</h5>
+			<p>{{post?.body}}</p>
+		</div>
 	</div>
 </div>
