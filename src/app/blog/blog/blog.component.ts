@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DBService } from 'src/app/core/db.service';
 import { IBlogPost } from './blog.model';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -8,15 +9,11 @@ import { IBlogPost } from './blog.model';
 	templateUrl: './blog.component.html',
 	styleUrls: ['./blog.component.css']
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent {
 	posts: IBlogPost[] = [];
-	constructor(private dbService: DBService) { }
-
-	ngOnInit(): void {
-		this.dbService.getBlogPosts().subscribe(
-			posts => {
-				this.posts = posts;
-			}
+	constructor(private dbService: DBService, route: ActivatedRoute) { 
+		route.data.subscribe(
+			data => this.posts = data['posts']
 		);
 	}
 }

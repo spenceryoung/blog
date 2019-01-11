@@ -1,9 +1,8 @@
 import { Injectable } from "@angular/core";
-import 'rxjs';
-import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Observable } from "rxjs";
 import { IBlogPost } from "../blog/blog/blog.model";
-import { map } from "rxjs/operators";
+import { map, first } from "rxjs/operators";
 
 @Injectable({
     providedIn: 'root'
@@ -21,12 +20,15 @@ export class DBService {
 				var data: IBlogPost = a.payload.doc.data();
             	data.postId = a.payload.doc.id;
               	return data;
-            }))
+            })),
+            first()
         );
     }
     getBlogPost(id: string): Observable<IBlogPost> {
         var doc: string = `blogposts/${id}`;
         this.blogPostDocumentRef = this.db.doc(doc);
-        return this.blogPostDocumentRef.valueChanges();
+        return this.blogPostDocumentRef.valueChanges().pipe(
+            first()
+        );
     }
 }

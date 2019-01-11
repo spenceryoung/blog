@@ -8,16 +8,11 @@ import { ActivatedRoute } from '@angular/router';
 	templateUrl: './blog-detail.component.html',
 	styleUrls: ['./blog-detail.component.css']
 })
-export class BlogDetailComponent implements OnInit {
+export class BlogDetailComponent {
 	post: IBlogPost;
-	constructor(private dbService: DBService, private route: ActivatedRoute) { }
-
-	ngOnInit() {
-		const id = this.route.snapshot.paramMap.get('id');
-		this.dbService.getBlogPost(id).subscribe(
-			post => {
-				this.post = post;
-			}
-		); 
+	constructor(private dbService: DBService, private route: ActivatedRoute) {
+		route.data.subscribe(
+			data => this.post = data['post']
+		);
 	}
 }

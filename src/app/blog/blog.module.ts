@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlogComponent } from './blog/blog.component';
 import { RouterModule } from '@angular/router';
-import { BlogResolver } from './blog/blog-resolver.service';
+import { BlogPostResolver } from './blog/blog-post-resolver.service';
+import { BlogPostsResolver } from './blog/blog-posts-resolver.service';
 import { BlogDetailComponent } from './blog/blog-detail.component';
 
 @NgModule({
@@ -12,14 +13,16 @@ import { BlogDetailComponent } from './blog/blog-detail.component';
 		RouterModule.forChild([
 			{
 				path: 'blog',
-				component: BlogComponent
+				component: BlogComponent,
+				resolve: {posts: BlogPostsResolver}
 			},
 			{
 				path: 'blog/:id',
-				component: BlogDetailComponent
+				component: BlogDetailComponent,
+				resolve: {post: BlogPostResolver}
 			}
 		])
 	],
-	providers: [BlogResolver]
+	providers: [BlogPostsResolver, BlogPostResolver]
 })
 export class BlogModule { }
