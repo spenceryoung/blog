@@ -9,10 +9,12 @@ import { ActivatedRoute } from '@angular/router';
 	templateUrl: './blog.component.html',
 	styleUrls: ['./blog.component.css']
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit{
 	posts: IBlogPost[] = [];
-	constructor(private dbService: DBService, route: ActivatedRoute) { 
-		route.data.subscribe(
+	constructor(private dbService: DBService, private route: ActivatedRoute) {	}
+
+	ngOnInit() {
+		this.route.data.subscribe(
 			data => this.posts = data['posts']
 		);
 	}
