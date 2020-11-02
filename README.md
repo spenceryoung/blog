@@ -1,4 +1,4 @@
-# Blog
+# Blog **The firebase cloudstore for this project no longer exists. It's just an example of an angular cms**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
